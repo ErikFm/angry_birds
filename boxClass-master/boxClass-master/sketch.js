@@ -16,6 +16,7 @@ function setup(){
     box3 = new Box(830,330,70,70);
     box4 = new Box(990,330,70,70);
     CHao = new Chao(600,390,1200,30);
+    CHao1 = new Chao(200,300,300,300);
     porquinho1 = new Porco(910,370);
     porquinho2 = new Porco(910,330);
     madeira1 = new Madeira(910,340,248,PI/2)
@@ -40,4 +41,5 @@ function draw(){
    boxE.display();
    telhado1.display();
    telhado2.display();
+   CHao1.display();
 }
