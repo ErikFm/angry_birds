@@ -16,9 +16,10 @@ class ElemenX {
     display(){
       var pos =this.body.position;
       var angle =this.body.angle;
+      push();
       imageMode(CENTER);
       fill(255);
-      push();
+      
       translate(pos.x,pos.y);
       rotate(angle)
       image(this.image,0, 0, this.width, this.height);
