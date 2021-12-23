@@ -20,7 +20,7 @@ function setup(){
     box3 = new Box(830,330,70,70);
     box4 = new Box(990,330,70,70);
     CHao = new Chao(600,390,1200,30);
-    CHao1 = new Chao(200,300,300,300);
+    CHao1 = new Chao(200,300,400,159);
     porquinho1 = new Porco(910,370);
     porquinho2 = new Porco(910,330);
     madeira1 = new Madeira(910,340,248,PI/2);
@@ -28,8 +28,8 @@ function setup(){
     boxE = new Box(910,310,70,70);
     telhado1 = new Madeira(855,300,110,PI/4);
     telhado2 = new Madeira(960,300,110,PI/-4);
-    passaro1 = new Passarinho (100,100);
-    log = new Madeira(230,180,80,PI/2);
+    passaro1 = new Passarinho (120,100);
+    //log = new Madeira(230,180,80,PI/2);
     restricao1 = new rest(passaro1.body,{x:300,y:30});
 }
 
@@ -50,7 +50,7 @@ function draw(){
    telhado2.display();
    CHao1.display();
    passaro1.display();
-   log.display();
+   //log.display();
    restricao1.display();
 }
 function mouseDragged(){
@@ -58,4 +58,9 @@ function mouseDragged(){
 }
 function mouseReleased(){
     restricao1.fly()
+}
+function keyPressed(){
+    if (keyCode===32){
+        restricao1.atac(passaro1.body);
+    }
 }
